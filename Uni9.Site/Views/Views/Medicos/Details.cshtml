@@ -1,0 +1,7 @@
+@using ClinicaVida.Web.Models
+@model Medico
+
+<h1>@Model.Nome</h1>
+<p>CRM: @Model.Crm</p>
+<p>Especialidade: @Model.Especialidade?.Nome</p>
+<a href="/Medicos">Voltar à lista</a>

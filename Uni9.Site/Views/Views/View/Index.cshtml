@@ -1,0 +1,17 @@
+@using ClinicaVida.Web.Models
+@model IEnumerable<Especialidade>
+@{
+    var contagem = (Dictionary<int, int>)ViewBag.MedicosPorEspecialidade;
+}
+
+<h1>Especialidades</h1>
+
+<ul>
+@foreach (var e in Model)
+{
+    <li>
+        <a href="/Medicos?especialidadeId=@e.Id">@e.Nome</a>
+        (@contagem[e.Id] médicos) - @e.Descricao
+    </li>
+}
+</ul>
